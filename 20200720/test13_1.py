@@ -1,0 +1,17 @@
+import turtle as t
+t.shape('turtle')
+t.color('pink')
+t.left(45)
+t.forward(100)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(100)
+    
+t.mainloop()
