@@ -1,0 +1,9 @@
+
+.vscode/launch.json
+*.pyc
+node_modules
+*.log
+*.exe
+*.spec
+*/build/*
+*/dist/*
