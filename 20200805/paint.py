@@ -3,9 +3,9 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-class MyApp(QWidget):
-    def __init__(self):
-        super().__init__()
+class MyApp(QWidget): # QWidget 상속 받은 MyApp 클래스
+    def __init__(self): # 초기화 함수
+        super().__init__() # 부모 
         self.initUI()
 
     def initUI(self):
@@ -72,8 +72,8 @@ class MyApp(QWidget):
         hbox.addWidget(self.brushbtn)
 
         # 우측 레이아웃 박스에 그래픽 뷰 추가
-        self.view = CGView(self)
-        rightbox.addWidget(self.view)
+        self.view = CGView(self) # 그래픽 뷰 객체 생성
+        rightbox.addWidget(self.view) 
 
         frmbox.addLayout(leftbox)
         frmbox.addLayout(rightbox)

@@ -3,6 +3,7 @@ from PyQt5 import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 import random
+from test1lotto import *
 
 class MyWindow(QWidget): # 위젯 안에서만 레이아웃 적용 가능
     def __init__(self):
@@ -30,6 +31,7 @@ class MyWindow(QWidget): # 위젯 안에서만 레이아웃 적용 가능
         self.n6.setPixmap(q_img)
 
         self.btn = QPushButton('두구두구!!',self)
+        self.btn.clicked.connect(self.change)
 
         grid = QGridLayout()
         self.setLayout(grid)
@@ -40,16 +42,13 @@ class MyWindow(QWidget): # 위젯 안에서만 레이아웃 적용 가능
         grid.addWidget(self.n4,0,3)
         grid.addWidget(self.n5,0,4)
         grid.addWidget(self.n6,0,5)
-        grid.addWidget(self.btn,1,2,1,5)
+        grid.addWidget(self.btn,1,2,1,2)
         # self.btn.setGeometry(500,400,100,50)
-
-        
-        
-        
 
         self.show()
 
-        
+     def change(self):
+         
 
 
 

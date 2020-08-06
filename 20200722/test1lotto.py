@@ -35,7 +35,7 @@ def getLotto(num):
                 i += 1
         lotto.sort() # 정렬 
         print(lotto) # 출력
-    
+        return lotto
 getLotto(5)
 
 
