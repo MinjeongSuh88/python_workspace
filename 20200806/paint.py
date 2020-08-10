@@ -106,7 +106,7 @@ class MyApp(QWidget):       # QWidget 상속 받은 MyApp 클래스
 
     # 그룹 박스 5
     # 파일 저장
-        gb5 = QGroupBox('File')     
+        gb5 = QGroupBox('File')         # 그룹 박스 객체5 만듦  
         leftbox.addWidget(gb5)
 
         hbox5 = QHBoxLayout()
