@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="next.html" method='post'>
+    <!-- method='get' :주소창에 정보가 남아있는 방법, 255자까지만 포함
+    method='post' :소스코드 내에 정보를 담아 보냄, 사진을 첨부할 때 사용 -->
+        id: <input type="text" name="id" id=""><br>
+        <!-- id: input:text[name='id']+br -->
+        pw: <input type="password" name="pw" id=""><br>
+        <!-- pw: input:text[name='pw']+br -->
+        <h2>취미</h2>
+        <input type="checkbox" name="hobby1" id="">LOL<br>
+        <input type="checkbox" name="hobby2" id="">독서<br>
+        <input type="checkbox" name="hobby3" id="">등산<br>
+        <h3>성별</h3>
+        <input type="radio" name="gender" id="">남<br>
+        <input type="radio" name="gender" id="">여<br>
+        <!-- radio타입은 name이 같이 부여해야 1개만 선택할 수 있음 -->
+        <h3>생년월일</h3>
+        <input type="date" name="time" id="">
+        <!-- 자바스크립트 달력 -->
+        <marquee behavior="scroll" direction="">광고.....</marquee>
+        <!-- 오른쪽에서 왼쪽으로 움직임 -->
+        <select name="menu" id="">
+        <!-- 여러 개의 옵션 중에 선택할 수 있는 콤보 -->
+            <option value="컵라면">컵라면</option>
+            <option value='햄버거'>햄버거</option>
+            <option value='치킨'>치킨</option>
+            <option value='우동'>우동</option>
+            <option value='부대찌개'>부대찌개</option>
+        </select>
+        <input type="submit" value="가입">
+    </form>
+</body>
+</html>
+
