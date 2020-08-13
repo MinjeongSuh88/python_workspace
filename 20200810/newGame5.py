@@ -63,7 +63,7 @@ enmx = 300      # 적이미지 좌표 변수 지정
 enmy = 0
 
 # 적우주선 다량 출현
-# enmList = []        # 적우주선 좌표 객체 담을 리스트 준비
+enmList = []        # 적우주선 좌표 객체 담을 리스트 준비
 
 class EnemyShip:         # 적우주선 클래스 생성
     def __init__(self,x,y,hp,type):     
@@ -73,7 +73,6 @@ class EnemyShip:         # 적우주선 클래스 생성
         self.type = type        # type 1은 일반 적, 2는 보스
 
 def makeEnemy():        # 적우주선 객체를 만들어 리스트에 담는 함수
-    enmList = []        # 적우주선 좌표 객체 담을 리스트 준비
     e = EnemyShip(random.randint(1,550),50,100,1)       # 적우주선 클래스의 인스턴스 생성
     enmList.append(e)        # 적우주선 객체를 리스트에 담음
         
@@ -86,7 +85,7 @@ def pythagoras(x1,y1,x2,y2):        # 적우주선과 미사일 사이의 거리
 
 # 충돌 체크 함수
 def collision(x1,y1,x2,y2):
-    dis = pythagoras(x1,y1,x2,y2)     # 적우주선과 미사일과의 거리
+    dis = pythagoras(x1,y1,x2,y2)     # 적우주선과 미사일과의 거리 변수 지정
     result = 0
     if dis < 30:        # 거리가 30미만이면 -> 적우주선에 미사일에 맞으면
         result = 1      # 결과 변수는 1
@@ -147,7 +146,7 @@ while isRunning:
     # 미사일과 적우주선 간 충돌 발생 여부
     for m in mxy:      # 미사일 중 1개 꺼내고
         for e in enmList:       # 적우주선 중 1개 꺼내서
-            result = collision(e.x, e.y, m.x, m.y)
+            result = collision(e.x, e.y, m.x, m.y)      # 0 또는 1을 리턴하는 함수의 리턴값을 변수에 담음
             if result == 1:
                 e.y -= 10       # 적은 약간 뒤로 밀리고
                 m.x -= -50     # 미사일은 화면 밖으로 
